@@ -1,0 +1,72 @@
+.flex {
+    display: flex;
+  }
+  
+  .flex__item {
+    flex: 1;
+  }
+  
+  //盒模型垂直布局
+  .flex__v {
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  //子元素垂直居中
+  .flex__middle {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  //子元素向下对其
+  .flex__bottom {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: flex-end;
+  }
+  //子元素水平居中
+  .flex__center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  
+  //子元素两端对齐
+  .flex__justify {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+  .flex__space-around{
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+  
+  .flex__end {
+    flex-direction: row-reverse
+  }
+  
+  .flex_cm {
+    .flex;
+    .flex__v;
+    .flex__center;
+    .flex__middle;
+  }
+  
+  .fl{
+    float: left;
+  }
+  .fr{
+    float: right;
+  }
+
+
+
+  .center{
+    text-align: center;
+  }
+
+

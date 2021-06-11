@@ -1,0 +1,396 @@
+@color: #353535;  // 主色调
+@import 'flex.less';
+@import 'margin.less';
+
+.border-rds(@radius){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.bs_bb(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bs_cb(){
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.text_one(){
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text_hide(@pre:2){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @pre;
+}
+
+.box-shadow(@pre){
+  -webkit-box-shadow: @pre;
+  -moz-box-shadow: @pre;
+  -ms-box-shadow: @pre;
+  -o-box-shadow: @pre;
+  box-shadow: @pre;
+}
+
+.scale(@pre){
+  -webkit-transform: scale(@pre);
+  -moz-transform: scale(@pre);
+  -ms-transform: scale(@pre);
+  -o-transform: scale(@pre);
+  transform: scale(@pre);
+}
+
+.scaleY(@pre){
+  -webkit-transform: scaleY(@pre);
+  -moz-transform: scaleY(@pre);
+  -ms-transform: scaleY(@pre);
+  -o-transform: scaleY(@pre);
+  transform: scaleY(@pre);
+}
+
+.scaleX(@pre){
+  -webkit-transform: scaleX(@pre);
+  -moz-transform: scaleX(@pre);
+  -ms-transform: scaleX(@pre);
+  -o-transform: scaleX(@pre);
+  transform: scaleX(@pre);
+}
+
+.translateY(@pre){
+    -webkit-transform: translateY(@pre);
+    -moz-transform: translateY(@pre);
+    -ms-transform: translateY(@pre);
+    -o-transform: translateY(@pre);
+    transform: translateY(@pre);
+}
+.translateX(@pre){
+    -webkit-transform: translateX(@pre);
+    -moz-transform: translateX(@pre);
+    -ms-transform: translateX(@pre);
+    -o-transform: translateX(@pre);
+    transform: translateX(@pre);
+}
+.translate(@preX,@preY){
+    -webkit-transform: translate(@preX,@preY);
+    -moz-transform: translate(@preX,@preY);
+    -ms-transform: translate(@preX,@preY);
+    -o-transform: translate(@preX,@preY);
+    transform: translate(@preX,@preY);
+}
+
+.animation(@preX){
+    -webkit-animation: @preX;
+    -moz-animation: @preX;
+    -ms-animation: @preX;
+    -o-animation: @preX;
+    animation: @preX;
+}
+
+.transform-o(@pre){
+  -webkit-transform-origin: @pre;
+  -moz-transform-origin: @pre;
+  -ms-transform-origin: @pre;
+  -o-transform-origin: @pre;
+  transform-origin: @pre;
+}
+
+.transition(@pre){
+  -webkit-transition: @pre;
+  -moz-transition: @pre;
+  -ms-transition: @pre;
+  -o-transition: @pre;
+  transition: @pre;
+}
+
+.wcalc(@width) {
+  width: -webkit-calc(@width);
+  width: -moz-calc(@width);
+  width: -ms-calc(@width);
+  width: -o-calc(@width);
+  width: calc(@width);
+}
+
+.hcalc(@height) {
+  height: -webkit-calc(@height);
+  height: -moz-calc(@height);
+  height: -ms-calc(@height);
+  height: -o-calc(@height);
+  height: calc(@height);
+}
+.clear() {
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+body,
+p,
+ul,
+ol,
+li,
+form,
+th,
+td,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+title,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+dt,
+dd {
+  list-style: none;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+  box-sizing: border-box;
+}
+body {
+  font-size: 12px;
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+}
+table {
+  border-collapse: collapse;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #555;
+}
+img {
+  border: none;
+  font-size: 0;
+  vertical-align: middle;
+}
+input,
+textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: 0 0 0px 1000px white inset;
+  width: 100%;
+  border: none;
+  border: 1px solid #bbb;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  font-size: 14px;
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+}
+input.on {
+  border-color: #ff6400;
+}
+textarea {
+  resize: none;
+  overflow: auto;
+}
+input[type="radio"],input[type="checkbox"]{
+  box-shadow:none;
+  border: none;
+}
+select {
+  line-height: 2.3;
+  border: none;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+  outline: 0;
+  font-size: 14px;
+  color: #555;
+  font-family: Microsoft YaHei, arial, tahoma, '\5fae\8f6f\96c5\9ed1', 'Hiragino Sans GB', sans-serif !important;
+}
+input:disabled{
+  -webkit-opacity: 1 !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #333;
+}
+/*****************************
+辅助类样式
+*****************************/
+.clear:after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.con {
+  margin: 0 auto;
+  min-width: 1200px;
+  width: 1200px;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.text-r {
+  text-align: right !important;
+}
+.text-l {
+  text-align: left !important;
+}
+.text-c {
+  text-align: center !important;
+}
+.bg-b {
+  background-color: #333333 !important;
+  width: 100%;
+}
+.bg-w {
+  background-color: white !important;
+  width: 100%;
+}
+.bg-o {
+  background-color: #ff5529 !important;
+  width: 100%;
+}
+.bg-g {
+  background-color: #f8f8f8 !important;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+.w-half {
+  width: 50% !important;
+}
+.w-max {
+  width: 100% !important;
+}
+.edit_textBox{
+  word-break: break-all;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #000;
+  *{
+    font-size: inherit;
+    max-width: 100% !important;
+  }
+  td,th{
+    border: 1px solid #000;
+  }
+  a{
+    color: #7030a0;
+    text-decoration: underline;
+  }
+  h1,h2,h3,h4,h5,h6{
+    line-height: 2;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 18.72px;
+  }
+  h4{
+    font-size: 16px;
+  }
+  h5{
+    font-size: 13.28px;
+  }
+  h6{
+    font-size: 12px;
+  }
+  img{
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    width: auto;
+  }
+}
+/*****************************
+错误提示样式
+*****************************/
+.name-error,
+.username-error,
+.phone-error,
+.phone_code-error,
+.email-error,
+.password-error,
+.password_null-error,
+.password_alike-error,
+.ID-error,
+.name-true,
+.ID-true,
+.phone-true,
+.phone_code-true,
+.email-true,
+.password-true,
+.password_null-true,
+.password_alike-true {
+  display: none ;
+}
+.error span{
+  color: red;
+  display: none;
+  font-size: 12px;
+}
+/*****************************
+验证码按钮事件css类
+*****************************/
+.M_verification-code {
+  display: inline-block;
+  width: 100%;
+  line-height: 2.2;
+  background-color: #FE5E0B;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 14px;
+  text-decoration: none;
+}
+.M_verification-code.on {
+  background-color: gray;
+}
+
+/*****************************
+页面样式
+*****************************/
